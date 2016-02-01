@@ -11,9 +11,5 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
 
-Route::resource('products', 'ProductController');
+Route::resource('/products', 'ProductController');
