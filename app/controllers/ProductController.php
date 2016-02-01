@@ -10,7 +10,8 @@ class ProductController extends \BaseController {
 	public function index()
 	{
 		$products = DB::table('products')
-					->join('manufacturers', 'products.manufacturer_id', '=', 'manufacturers.id' )
+					->join('manufacturers', 'products.manufacturer_id', '=', 'manufacturers.manufacturer_id' )
+					->select('product_name', 'product_price', 'product_description', 'manufacturer_name')
 					->get();
 		return json_encode($products);
 	}
