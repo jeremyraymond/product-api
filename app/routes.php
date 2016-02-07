@@ -11,4 +11,6 @@
 |
 */
 
-Route::get('products', 'ProductController@getAll');
+Route::get('products', 'ProductController@getProducts');
+
+Route::get('products/{guid}', 'ProductController@getSingleProduct');
